@@ -21,6 +21,8 @@ metric_plots:
 	gnuplot -e "splot 'fc_data.txt' using 1:2:3 with dots, 'fc_solution_metric.txt' using 1:2:3 with lines" -p
 	gnuplot -e "splot 'gc_data.txt' using 1:2:3 with dots, 'gc_solution_metric.txt' using 1:2:3 with lines" -p
 
+plots: run backtracking_plots function_value_eval_plots metric_plots
+
 
 clean:
 	rm -rf fg *.txt *.sh
